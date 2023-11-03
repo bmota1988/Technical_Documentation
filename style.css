@@ -1,0 +1,75 @@
+/*Definition on screen size*/
+
+/*Cellphone*/
+@media (max-width: 480px) {
+  #navbar {
+    zoom: 98%;
+  }
+  h2 {
+    zoom: 70%;
+  }
+  #navbar p {
+    zoom: 80%;
+  }
+}
+
+/*Layout of the Nav bar*/
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  border-style: solid;
+  border-color: black;
+  background-color: #f5f5f5;
+}
+
+#navbar p {
+  text-align: center;
+  padding: 1px;
+  height: 5.5%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  padding: 30px;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+}
+
+/*Layout of the main doc*/
+
+#main-doc {
+  position: absolute;
+  max-width: 70%;
+  right: 15px;
+}
+
+.main-section {
+  text-align: justify;
+  line-height: 30px;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.img-bg {
+  background-color: #f5f5f5;
+}

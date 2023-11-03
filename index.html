@@ -1,0 +1,288 @@
+<!--DOCTYPE-->
+<html lang="en">
+
+<head>
+  <!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+</head>
+
+<!--Navbar-->
+
+<nav id="navbar">
+  <header>
+    <h1>Fluid Mechanics</h1>
+  </header>
+  <hr>
+  <p><a href="#introdution" class="nav-link">Introdution</a></p>
+  <hr>
+  <p><a href="#fluid_statics" class="nav-link">Fluid Statics</a></p>
+  <hr>
+  <p><a href="#fluid_dynamics" class="nav-link">Fluid Dynamics</a></p>
+  <hr>
+  <p><a href="#assumptions" class="nav-link">Assumptions</a></p>
+  <hr>
+  <p><a href="#navier_stokes_equations" class="nav-link">Navier Stokes Equations</a></p>
+  <hr>
+  <p><a href="#invicid_and_viscous_fluids" class="nav-link">Invicid and Viscous Fluids</a></p>
+  <hr>
+  <p><a href="#equations_for_a_newtonian_fluid" class="nav-link">Equations for a Newtonian Fluid</a></p>
+  <hr>
+  <p><a href="#references" class="nav-link">References</a></p>
+</nav>
+
+<!--Main doc-->
+
+<main id="main-doc">
+  <section class="main-section" id="introdution">
+    <header>
+      <h1>Introdution</h1>
+    </header>
+    <p>Fluid mechanics is the branch of physics concerned with the mechanics of fluids (liquids, gases, and plasmas)
+      and
+      the forces on them. It has applications in a wide range of disciplines, including mechanical, civil, chemical
+      and
+      biomedical engineering, geophysics, oceanography, meteorology, astrophysics, and biology.</p>
+    <p>It can be divided into fluid statics, the study of fluids at rest; and fluid dynamics, the study of the effect
+      of
+      forces on fluid motion. It is a branch of continuum mechanics, a subject which models matter without using the
+      information that it is made out of atoms; that is, it models matter from a macroscopic viewpoint rather than
+      from
+      microscopic. Fluid mechanics, especially fluid dynamics, is an active field of research, typically
+      mathematically
+      complex. Many problems are partly or wholly unsolved and are best addressed by numerical methods, typically
+      using
+      computers. A modern discipline, called computational fluid dynamics (CFD), is devoted to this approach. Particle
+      image velocimetry, an experimental method for visualizing and analyzing fluid flow, also takes advantage of the
+      highly visual nature of fluid flow.</p><br />
+  </section>
+  <section class="main-section" id="fluid_statics">
+    <header>
+      <h1>Fluid Statics</h1>
+    </header>
+    <p>Fluid statics or hydrostatics is the branch of fluid mechanics that studies fluids at rest. It embraces the
+      study
+      of the conditions under which fluids are at rest in stable equilibrium; and is contrasted with fluid dynamics,
+      the
+      study of fluids in motion. Hydrostatics offers physical explanations for many phenomena of everyday life, such
+      as
+      why atmospheric pressure changes with altitude, why wood and oil float on water, and why the surface of water is
+      always level whatever the shape of its container. Hydrostatics is fundamental to hydraulics, the engineering of
+      equipment for storing, transporting and using fluids. It is also relevant to some aspects of geophysics and
+      astrophysics (for example, in understanding plate tectonics and anomalies in the Earth's gravitational field),
+      to
+      meteorology, to medicine (in the context of blood pressure), and many other fields.</p><br />
+  </section>
+  <section class="main-section" id="fluid_dynamics">
+    <header>
+      <h1>Fluid Dynamics</h1>
+    </header>
+    <p>Fluid dynamics is a subdiscipline of fluid mechanics that deals with fluid flow—the science of liquids and
+      gases
+      in motion. Fluid dynamics offers a systematic structure—which underlies these practical disciplines—that
+      embraces
+      empirical and semi-empirical laws derived from flow measurement and used to solve practical problems. The
+      solution
+      to a fluid dynamics problem typically involves calculating various properties of the fluid, such as velocity,
+      pressure, density, and temperature, as functions of space and time. It has several subdisciplines itself,
+      including aerodynamics (the study of air and other gases in motion) and hydrodynamics (the study of liquids in
+      motion). Fluid dynamics has a wide range of applications, including calculating forces and movements on
+      aircraft,
+      determining the mass flow rate of petroleum through pipelines, predicting evolving weather patterns,
+      understanding
+      nebulae in interstellar space and modeling explosions. Some fluid-dynamical principles are used in traffic
+      engineering and crowd dynamics.</p><br />
+  </section>
+  <section class="main-section" id="assumptions">
+    <header>
+      <h1>Assumptions</h1>
+    </header>
+    <p>The assumptions inherent to a fluid mechanical treatment of a physical system can be expressed in terms of
+      mathematical equations. Fundamentally, every fluid mechanical system is assumed to obey:</p>
+    <li>Conservation of mass</li>
+    <li>Conservation of energy</li>
+    <li>Conservation of momentum</li>
+    <li>The continuum assumption</li>
+    <p>For example, the assumption that mass is conserved means that for any fixed control volume (for example, a
+      spherical volume)—enclosed by a control surface—the rate of change of the mass contained in that volume is equal
+      to the rate at which mass is passing through the surface from outside to inside, minus the rate at which mass is
+      passing from inside to outside. This can be expressed as an equation in integral form over the control volume.
+    </p>
+    <p>The continuum assumption is an idealization of continuum mechanics under which fluids can be treated as
+      continuous, even though, on a microscopic scale, they are composed of molecules. Under the continuum assumption,
+      macroscopic (observed/measurable) properties such as density, pressure, temperature, and bulk velocity are taken
+      to be well-defined at "infinitesimal" volume elements—small in comparison to the characteristic length scale of
+      the system, but large in comparison to molecular length scale. Fluid properties can vary continuously from one
+      volume element to another and are average values of the molecular properties. The continuum hypothesis can lead
+      to
+      inaccurate results in applications like supersonic speed flows, or molecular flows on nano scale. Those
+      problems for which the continuum hypothesis fails can be solved using statistical mechanics. To determine
+      whether
+      or not the continuum hypothesis applies, the Knudsen number, defined as the ratio of the molecular mean free
+      path
+      to the characteristic length scale, is evaluated. Problems with Knudsen numbers below 0.1 can be evaluated using
+      the continuum hypothesis, but molecular approach (statistical mechanics) can be applied for all ranges of
+      Knudsen
+      numbers.</p><br />
+  </section>
+  <section class="main-section" id="navier_stokes_equations">
+    <header>
+      <h1>Navier Stokes Equations</h1>
+    </header>
+    <p>The Navier–Stokes equations (named after Claude-Louis Navier and George Gabriel Stokes) are differential
+      equations that describe the force balance at a given point within a fluid. For an incompressible fluid with
+      vector
+      velocity field <code> &nbsp<img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/261e20fe101de02a771021d9d4466c0ad3e352d7" />,
+      </code>the
+      Navier–Stokes equations are</p>
+    <img class="img-bg"
+      src="https://wikimedia.org/api/rest_v1/media/math/render/svg/326817f4da190e9db80ed24b0d62d300878d162d"></img>
+    <p>These differential equations are the analogues for deformable materials to Newton's equations of motion for
+      particles – the Navier–Stokes equations describe changes in momentum (force) in response to pressure <code>
+        &nbsp
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a" />
+        &nbsp </code>
+      and viscosity, parameterized by the kinematic viscosity <code> &nbsp <img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c15bbbb971240cf328aba572178f091684585468" />
+        &nbsp </code>
+      here. Occasionally, body forces, such as the gravitational force or Lorentz force are added to the equations.
+    </p>
+    <p>Solutions of the Navier–Stokes equations for a given physical problem must be sought with the help of calculus.
+      In practical terms, only the simplest cases can be solved exactly in this way. These cases generally involve
+      non-turbulent, steady flow in which the Reynolds number is small. For more complex cases, especially those
+      involving turbulence, such as global weather systems, aerodynamics, hydrodynamics and many more, solutions of
+      the
+      Navier–Stokes equations can currently only be found with the help of computers. This branch of science is called
+      computational fluid dynamics.</p><br />
+  </section>
+  <section class="main-section" id="invicid_and_viscous_fluids">
+    <header>
+      <h1>Invicid and Viscous Fluids</h1>
+    </header>
+    <p>An inviscid fluid has no viscosity,<code>&nbsp<img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7229c47b5bc20ef0a1371a4f3c09459ccb6909ff" />&nbsp</code>
+      In practice, an inviscid flow is an idealization, one that facilitates mathematical treatment. In fact, purely
+      inviscid flows are only known to be realized in the case of superfluidity. Otherwise, fluids are generally
+      viscous, a property that is often most important within a boundary layer near a solid surface, where the flow
+      must
+      match onto the no-slip condition at the solid. In some cases, the mathematics of a fluid mechanical system can
+      be
+      treated by assuming that the fluid outside of boundary layers is inviscid, and then matching its solution onto
+      that for a thin laminar boundary layer.</p>
+    <p>For fluid flow over a porous boundary, the fluid velocity can be discontinuous between the free fluid and the
+      fluid in the porous media (this is related to the Beavers and Joseph condition). Further, it is useful at low
+      subsonic speeds to assume that gas is incompressible—that is, the density of the gas does not change even though
+      the speed and static pressure change.</p><br />
+  </section>
+  <section class="main-section" id="equations_for_a_newtonian_fluid">
+    <header>
+      <h1>Equations for a Newtonian Fluid</h1>
+    </header>
+    <p>A Newtonian fluid (named after Isaac Newton) is defined to be a fluid whose shear stress is linearly
+      proportional
+      to the velocity gradient in the direction perpendicular to the plane of shear. This definition means regardless
+      of
+      the forces acting on a fluid, it continues to flow. For example, water is a Newtonian fluid, because it
+      continues
+      to display fluid properties no matter how much it is stirred or mixed. A slightly less rigorous definition is
+      that
+      the drag of a small object being moved slowly through the fluid is proportional to the force applied to the
+      object. (Compare friction). Important fluids, like water as well as most gases, behave—to good approximation—as
+      a
+      Newtonian fluid under normal conditions on Earth.</p>
+    <p>By contrast, stirring a non-Newtonian fluid can leave a "hole" behind. This will gradually fill up over
+      time—this
+      behavior is seen in materials such as pudding, oobleck, or sand (although sand isn't strictly a fluid).
+      Alternatively, stirring a non-Newtonian fluid can cause the viscosity to decrease, so the fluid appears
+      "thinner"
+      (this is seen in non-drip paints). There are many types of non-Newtonian fluids, as they are defined to be
+      something that fails to obey a particular property—for example, most fluids with long molecular chains can react
+      in a non-Newtonian manner.</p>
+    <p>The constant of proportionality between the viscous stress tensor and the velocity gradient is known as the
+      viscosity. A simple equation to describe incompressible Newtonian fluid behavior is</p>
+    <img class="img-bg"
+      src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cacaa2155e501b2c0e65ed132ee4db3044831e1a" />
+    <p>where</p>
+    <ul>
+      <li><code><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38a7dcde9730ef0853809fefc18d88771f95206c" />&nbsp</code>
+        is the shear stress exerted by the fluid</li>
+      <li><code><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fd47b2a39f7a7856952afec1f1db72c67af6161" />&nbsp
+        </code>
+        is the fluid viscosity—a constant of proportionality</li>
+      <li><code><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/051023484cdfb912d38dedae60ff43ecf61c1706">&nbsp</code>
+        is the velocity gradient perpendicular to the direction of shear.</li>
+    </ul>
+    <p>For a Newtonian fluid, the viscosity, by definition, depends only on temperature and pressure, not on the
+      forces
+      acting upon it. If the fluid is incompressible the equation governing the viscous stress (in Cartesian
+      coordinates) is</p>
+    <img class="img-bg"
+      src="https://wikimedia.org/api/rest_v1/media/math/render/svg/da69264bc1a85e120443b36251fb5f348bc351d3" />
+    <p>where</p>
+    <ul>
+      <li><img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/97d0190e7517254a655e8033badbc01c8590381c" />&nbsp
+        is the shear stress on the &nbsp<img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c454bb35f050556d361ee85e06ca923b16a3bf4" />&nbsp
+        face of a fluid element in the &nbsp <img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04bfd24f79d376ca8156511feb951588f358a928">&nbsp
+        direction</li>
+      <li><img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7dffe5726650f6daac54829972a94f38eb8ec127" />&nbsp
+        is the velocity in the &nbsp<img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c454bb35f050556d361ee85e06ca923b16a3bf4" />&nbsp
+        direction</li>
+      <li><img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5db47cb3d2f9496205a17a6856c91c1d3d363ccd" />&nbsp
+        is the &nbsp<img
+          src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04bfd24f79d376ca8156511feb951588f358a928" />&nbsp
+        direction coordinate.</li>
+    </ul>
+    <p>If the fluid is not incompressible the general form for the viscous stress in a <code>Newtonian fluid</code> is
+    </p>
+    <img class="img-bg"
+      src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eacbe693989661ada1e626b1252ef0e2e1d2a20c" />
+    <p>where &nbsp<img
+        src="https://wikimedia.org/api/rest_v1/media/math/render/svg/54ddec2e922c5caea4e47d04feef86e782dc8e6d" />&nbsp
+      is the second viscosity coefficient (or bulk viscosity). If a fluid does not obey this relation, it is termed a
+      non-Newtonian fluid, of which there are several types. Non-Newtonian fluids can be either plastic, Bingham
+      plastic, pseudoplastic, dilatant, thixotropic, rheopectic, viscoelastic.</p>
+    <p>In some applications, another rough broad division among fluids is made: ideal and non-ideal fluids. An ideal
+      fluid is non-viscous and offers no resistance whatsoever to a shearing force. An ideal fluid really does not
+      exist, but in some calculations, the assumption is justifiable. One example of this is the flow far from solid
+      surfaces. In many cases, the viscous effects are concentrated near the solid boundaries (such as in boundary
+      layers) while in regions of the flow field far away from the boundaries the viscous effects can be neglected and
+      the fluid there is treated as it were inviscid (ideal flow). When the viscosity is neglected, the term
+      containing
+      the viscous stress tensor &nbsp<img
+        src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fcc46f8785eec5db11fc73af8c5f02473cd0fd71" />&nbsp
+      in the Navier–Stokes equation vanishes. The equation reduced in this form is called the Euler equation.</p>
+    <br />
+  </section>
+  <section class="main-section" id="references">
+    <header>
+      <h1>References</h1>
+    </header>
+    <ul>
+      <li>White, Frank M. (2011). Fluid Mechanics (7th ed.). McGraw-Hill. ISBN 978-0-07-352934-9.</li>
+      <li>Tu, Jiyuan; Yeoh, Guan Heng; Liu, Chaoqun (Nov 21, 2012). Computational Fluid Dynamics: A Practical
+        Approach.
+        ISBN 978-0080982434</li>
+      <li>Batchelor, George K. (1967). An Introduction to Fluid Dynamics. Cambridge University Press. p. 74. ISBN
+        0-521-66396-2.</li>
+      <li>Greenkorn, Robert. Momentum, Heat, and Mass Transfer Fundamentals. CRC Press. ISBN 978-0824719722.</li>
+      <li>Kundu, Pijush K.; Cohen, Ira M.; Dowling, David R. "10". Fluid Mechanics (6th ed.). Academic Press. ISBN
+        978-0124059351.</li>
+    </ul>
+  </section>
+</main>
